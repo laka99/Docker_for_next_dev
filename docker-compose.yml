@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    image: next-build
+    container_name: next-container 
+    volumes: 
+      - ./nextjs-blog/:/app/
+    ports: 
+      - 8000:3000
+    command: npm run dev
